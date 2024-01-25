@@ -337,7 +337,7 @@ main( hypre_int argc,
     * GPU Device binding
     * Must be done before HYPRE_Init() and should not be changed after
     *-----------------------------------------------------------------*/
-   hypre_bind_device(myid, num_procs, comm);
+   hypre_bind_device(-1, myid, num_procs, comm);
 
    time_index = hypre_InitializeTiming("Hypre init");
    hypre_BeginTiming(time_index);
